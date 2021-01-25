@@ -42,7 +42,7 @@ import fs = require('fs');
 ////////////////////////////////////////////////////////////
 
 const models: Router = Router();
-let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 // var web3 = new Web3(new Web3.providers.HttpProvider("http://193.40.11.64:80"));
 
 const WebSocket = require('ws');

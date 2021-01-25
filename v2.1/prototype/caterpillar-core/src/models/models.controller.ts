@@ -36,7 +36,7 @@ import fs = require('fs');
 ////////////////////////////////////////////////////////////
 
 const models: Router = Router();
-let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 // var web3 = new Web3(new Web3.providers.HttpProvider("http://193.40.11.64:80"));
 
 const WebSocket = require('ws');
@@ -725,7 +725,7 @@ let searchRepository = (top: number, queue: Array<string>, processData: Map<stri
     repoSchema.find({_id: queue[top]},
         (err, repoData) => {
             if (err) {
-                return;
+                return err;
             } else {
               if(repoData.length > 0) {
                 let dictionary = repoData[0].indexToElement;
